@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="error-area"></div>
+    <header class="header">
+        <div class="game-info">
+            Level: <span></span>
+            <br>
+            Move(s): <span>0</span>
+        </div>
+        <button class="play-again-btn">PLAY AGAIN</button>
+        <button class="rules-btn">RULES</button>
+        <button class="hint-btn">HINT</button>
+    </header>
+    <div class="wrapper">
+        <form class="form num">
+            <label>
+                Enter your guess 
+                <br>
+                <input class="input-num" type="text">
+            </label>
+            <div class="value-areas">
+                <span class="value-area"></span>
+                <span class="value-area"></span>
+                <span class="value-area"></span>
+                <span class="value-area"></span>
+            </div>
+            <button>Guess number</button>
+            <ul class="messages"></ul>
+        </form>
+        <form class="form name">
+            <p>
+                Congratulations! 
+                <br>
+                You have guessed the number and win the game!
+            </p>
+            <label>
+                Please enter your username
+                <br> 
+                <input class="input-name" type="text">
+            </label>
+            <button>Submit username</button>
+        </form>
+    </div>
+    <div class="level-modal">
+        <h3>CHOOSE YOUR LEVEL</h3>
+        <button class="level-btn" data-name="easy">
+            <h4>EASY</h4>
+            <span>Digit range 0-3</span>
+        </button>
+        <button class="level-btn" data-name="medium">
+            <h4>MEDIUM</h4>
+            <span>Digit range 0-6</span>
+        </button>
+        <button class="level-btn" data-name="hard">
+            <h4>HARD</h4>
+            <span>Digit range 0-9</span>
+        </button>
+    </div>
+    <div class="rules-modal">
+        <h3>GAME RULES</h3>
+        <p>
+            Depending on the level, a four-digit number is generated. <br>
+            Your task is to guess it in the minimum number of moves.
+        </p>
+        <p>
+            Ram means the match of the number and its position.
+            <br>
+            Sheep is the right number in the wrong position.
+        </p>
+        <p>
+            You can use hint. But it will count as a move.
+            <ul>
+                Hints:
+                <li>Sheep is highlighted in orange</li>
+                <li>Ram is highlighted in green</li>
+            </ul>
+        </p>
+        <span class="close">OK</span>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
